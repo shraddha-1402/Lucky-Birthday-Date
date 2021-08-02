@@ -131,6 +131,21 @@ body{
   max-width: 10rem;
 }
 
+.footer> .icon-sm{
+  margin: 1rem;
+  font-size: 24px;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.footer>.icon-sm:hover{
+  transform: scale(1.2);
+  transition: transform 0.5s;
+
+}
+
 .privacy-div{
   background-color: var(--secondary-color);
   color: white;
