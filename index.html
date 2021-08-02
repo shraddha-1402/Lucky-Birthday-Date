@@ -4,22 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
   <title>Lucky Birthday</title>
 </head>
 
 <body>
-  <h1>Is Your Birthday Date Lucky?</h1>
-  <div id="privacy-note">Privacy Note: We are not storing your data!
-    <span id="del-privacy-note">x</span>
+  <div class="bg-image"></div>
+  <div class="content-container">
+    <h1 class="heading">Is Your Birthday Date Lucky?</h1>
+    <p></p>
+    <div id="privacy-note">Privacy Note: We are not storing your data!
+      <span id="del-privacy-note">x</span>
+    </div>
+    <form id="form">
+      <label for="bday-date"></label>
+      <input type="date" name="bday-date" id="bday-date" required />
+      <label for="lucky-num"></label>
+      <input type="number" name="lucky-num" placeholder="enter number" id="lucky-number" min="0" required />
+      <button type="submit" id="check-button">Check</button>
+    </form>
+    <div id="output"></div>
   </div>
-  <form id="form">
-    <label for="bday-date"></label>
-    <input type="date" name="bday-date" id="bday-date" required />
-    <label for="lucky-num"></label>
-    <input type="number" name="lucky-num" placeholder="enter number" id="lucky-number" min="0" required />
-    <button type="submit" id="check-button">Check</button>
-  </form>
-  <div id="output"></div>
   <script src="/main.js"></script>
 </body>
 

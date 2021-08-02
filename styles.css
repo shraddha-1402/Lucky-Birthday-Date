@@ -1,0 +1,41 @@
+body{
+  background-color: rgb(221, 182, 157);
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+}
+
+.bg-image{
+  background-image: url("./images/pexels-pavel-danilyuk-7180738.jpg");
+  height: 100%;
+  max-width: 50vw;
+  background-size: cover;
+}
+
+@media(max-width: 480px){
+  .bg-image{
+    max-width: 100vw;
+  }
+}
+
+.content-container{
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+  right: 1rem;
+  margin: 0 auto;
+  color: #8b5757;
+  padding: 1rem;
+  border-radius: 2rem;
+  background-color: rgb(214, 205, 199, 0.5);
+  margin: 0 auto;
+  max-width: 40rem;
+  overflow: auto;
+  height: 85vh;
+}
+
+.heading{
+  font-size: 40px;
+}
