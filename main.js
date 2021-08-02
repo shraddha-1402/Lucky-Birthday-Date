@@ -1,8 +1,8 @@
-const bdayDate = document.querySelector("#bday-date");
-const luckyNumber = document.querySelector("#lucky-number");
+const bdayDate = document.querySelector("#bday_date");
+const luckyNumber = document.querySelector("#lucky_number");
 const form = document.querySelector("#form");
 const output = document.querySelector("#output");
-const delPrivacyNote = document.querySelector("#del-privacy-note");
+const delPrivacyNote = document.querySelector("#del_privacy_note");
 
 function removePrivacyNote() {
   var close = document.querySelector("#privacy_note");
