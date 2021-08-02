@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Lucky Birthday</title>
 </head>
 
@@ -12,10 +13,11 @@
   <div class="bg-image"></div>
   <div class="content-container">
     <h1 class="heading">Is Your Birthday Date Lucky?</h1>
-    <p></p>
-    <div id="privacy-note">Privacy Note: We are not storing your data!
-      <span id="del-privacy-note">x</span>
-    </div>
+    <p class="sub-heading"><strong>
+        Enter below your Birthday Date and Lucky Number and we will tell you if your birthdate is
+        lucky or not
+      </strong></p>
+
     <form id="form">
       <label for="bday-date"></label>
       <input type="date" name="bday-date" id="bday-date" required />
@@ -24,6 +26,11 @@
       <button type="submit" id="check-button">Check</button>
     </form>
     <div id="output"></div>
+  </div>
+  <div id="privacy_note" class="privacy-div">
+    <span class="fa fa-exclamation-triangle icon-warning"></span>
+    <strong>Privacy Note:</strong> We are not storing your data!
+    <span id="del-privacy-note" class="fa fa-times-circle  icon-close"></span>
   </div>
   <script src="/main.js"></script>
 </body>

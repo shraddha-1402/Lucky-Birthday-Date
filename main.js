@@ -5,7 +5,18 @@ const output = document.querySelector("#output");
 const delPrivacyNote = document.querySelector("#del-privacy-note");
 
 function removePrivacyNote() {
-  document.querySelector("#privacy-note").remove();
+  var close = document.querySelector("#privacy_note");
+  var opacity = 1;
+  close.style.opacity = 1;
+  var interval = setInterval(() => {
+    if (opacity > 0) {
+      opacity -= 0.2;
+      close.style.opacity = opacity;
+    } else {
+      clearInterval(interval);
+      close.remove();
+    }
+  }, 50);
 }
 
 function checkIfLucky(event) {
@@ -29,4 +40,3 @@ function checkIfLucky(event) {
 delPrivacyNote.addEventListener("click", removePrivacyNote);
 
 form.addEventListener("submit", checkIfLucky);
-
