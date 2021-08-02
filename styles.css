@@ -1,12 +1,14 @@
 :root{
   --primary-color: #ddb69d;
   --secondary-color: #8b5757;
+  --light-primary: #D6CDC7;
 }
 
 body{
   background-color: var(--primary-color);
-  /* overflow: hidden; */
   margin: 0;
+  font-family:'Times New Roman', Times, serif;
+  text-align: center;
 }
 
 .bg-image{
@@ -22,32 +24,110 @@ body{
   }
 }
 
-.content-container{
+.container{
   position: absolute;
   top: 2rem;
   left: 1rem;
   right: 1rem;
   margin: 0 auto;
+  padding: 1rem;
   color: var(--secondary-color);
   background-color: rgb(214, 205, 199, 0.5);
-  padding: 1rem;
-  margin: 0 auto;
   height: 85vh;
   max-width: 40rem;
   border-radius: 2rem;
-  overflow: auto;
+}
+
+.content-container{
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  height: 100%;
+}
+
+
+::-webkit-scrollbar{
+  width: 5px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  background: var(--secondary-color);
+  border-radius: 0.5rem;
 }
 
 .heading{
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 
 .sub-heading{
-  margin: 1rem auto;
+  margin: 0rem auto;
+  margin-bottom: 2rem;
 }
 
-.heading, .sub-heading, .privacy-div{
-  text-align: center;
+.form-bday{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input{
+  width: 56vmin;
+  height: 2rem;
+  margin: 0.5rem 0rem;
+  padding: 0.25rem 1rem;
+  background-color: var(--light-primary);
+  color: var(--secondary-color);
+  caret-color: var(--secondary-color);
+}
+
+.input::placeholder{
+  color: var(--secondary-color);
+}
+
+.input:hover, .input:focus{
+  border-color: var(--secondary-color);
+}
+
+.input:focus{
+  background-color: var(--primary-color);
+}
+
+.input, .submit-button{
+  border-radius: 0.25rem;
+  font-weight: bold;
+  font-size: 16px;
+  outline: none;
+  border: 2px solid var(--primary-color);
+}
+
+.submit-button{
+  width: 10rem;
+  height: 2.25rem;
+  margin: 2rem;
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: white;
+  box-shadow: rgba(14, 38, 37, 0.12) 3px 4px 6px 2px,
+  rgba(14, 38, 37, 0.32) 1px 2px 4px 1px;
+  transition: box-shadow 0.1s ease;
+  cursor: pointer;
+
+}
+
+.submit-button:hover{
+  box-shadow: rgba(14, 38, 37, 0.12) 0px 1px 2px 0px,
+  rgba(14, 38, 37, 0.32) 0px 2px 4px 1px;
+  transition: box-shadow 0.1s ease;
+}
+
+.output-div{
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.output-gif{
+  max-width: 10rem;
 }
 
 .privacy-div{

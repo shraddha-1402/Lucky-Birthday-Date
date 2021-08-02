@@ -11,21 +11,25 @@
 
 <body>
   <div class="bg-image"></div>
-  <div class="content-container">
-    <h1 class="heading">Is Your Birthday Date Lucky?</h1>
-    <p class="sub-heading"><strong>
-        Enter below your Birthday Date and Lucky Number and we will tell you if your birthdate is
-        lucky or not
-      </strong></p>
+  <div class="container">
+    <div id="content_div" class="content-container">
+      <h1 class="heading">Is Your Birthday Date Lucky?</h1>
+      <p class="sub-heading"><strong>
+          Enter below your Birthday Date and Lucky Number and we will tell you if your birthdate is
+          lucky or not
+        </strong></p>
 
-    <form id="form">
-      <label for="bday_date"></label>
-      <input type="date" name="bday_date" id="bday_date" required />
-      <label for="lucky_num"></label>
-      <input type="number" name="lucky_num" placeholder="enter number" id="lucky_number" min="0" required />
-      <button type="submit" id="check_button">Check</button>
-    </form>
-    <div id="output"></div>
+      <form id="form" class="form-bday">
+        <label for="bday_date"></label>
+        <input class="input" type="date" name="bday_date" id="bday_date" required />
+        <label for="lucky_num"></label>
+        <input class="input" type="number" name="lucky_num" placeholder="enter number" id="lucky_number" min="0"
+          required />
+        <button type="submit" id="check_button" class="submit-button">Check</button>
+      </form>
+      <div id="output" class="output-div">
+      </div>
+    </div>
   </div>
   <div id="privacy_note" class="privacy-div">
     <span class="fa fa-exclamation-triangle icon-warning"></span>
