@@ -5,6 +5,17 @@ const output = document.querySelector("#output");
 const delPrivacyNote = document.querySelector("#del_privacy_note");
 const contentDiv = document.querySelector("#content_div");
 
+var imgHappy = new Image();
+imgHappy.src = "./images/happy.gif";
+imgHappy.alt = "happy";
+imgHappy.className = "output-gif";
+
+var imgSad = new Image();
+imgSad.src = "./images/sad.gif";
+imgSad.alt = "sad";
+imgSad.className = "output-gif";
+
+
 function removePrivacyNote() {
   var close = document.querySelector("#privacy_note");
   var opacity = 1;
@@ -43,22 +54,15 @@ function checkIfLucky(event) {
   });
 
   let p = document.createElement("p");
-  let img = new Image();
   if (sum % number === 0) {
     p.innerText = "Yayy! Your Birthday Date is Lucky!";
-    img.src = "./images/happy.gif";
-    img.alt = "happy";
-    img.className = "output-gif";
-    output.append(p, img);
+    output.append(p, imgHappy);
   }
   else {
     p.innerText = "Aww.. Your Birthday Date is Not Lucky!";
-    img.src = "./images/sad.gif";
-    img.alt = "sad";
-    img.className = "output-gif";
-    output.append(p, img);
+    output.append(p, imgSad);
   }
-  img.onload = () => scrollDown();
+  scrollDown();
   event.preventDefault();
 }
 form.addEventListener("submit", checkIfLucky);
