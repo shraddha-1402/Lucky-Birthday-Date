@@ -55,11 +55,11 @@ function checkIfLucky(event) {
 
   let p = document.createElement("p");
   if (sum % number === 0) {
-    p.innerText = "Yayy! Your Birthday Date is Lucky!";
+    p.innerText = "Yayy! Your Birthday Date Is Lucky!";
     output.append(p, imgHappy);
   }
   else {
-    p.innerText = "Aww.. Your Birthday Date is Not Lucky!";
+    p.innerText = "Aww.. Your Birthday Date Is Not Lucky!";
     output.append(p, imgSad);
   }
   scrollDown();
